@@ -14,3 +14,16 @@ There is a lot of stuff to fix
 * finish the api coverage
 * add tests
 * make money
+
+###Use
+
+    from simple_basecamp import simple_basecamp
+	api_token = ""
+    domain = ""
+    api = simple_basecamp(domain=domain, api_token=api_token)
+    print api.account()['name']
+    projects = api.get_projects()
+	for p in projects:
+        print p['name']
+
+This will print out your account name and then all your projects.
